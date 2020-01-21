@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!--[if IE 8]><style>.ie8 .alert-circle,.ie8 .alert-footer{display:none}.ie8 .alert-box{padding-top:75px}.ie8 .alert-sec-text{top:45px}</style><![endif]-->
+<title>请输入密码</title>
+
+</head>
+<body class="ie8">
+
+<script type="text/javascript">   
+function password() {   
+var testV = 1;   
+var pass1 = prompt('请输入密码:','');   
+while (testV < 3) {   
+if (!pass1)    
+history.go(-1);   
+if (pass1 == "huange") {//设置密码
+alert('口令正确，进行跳转');   
+window.location.href="https://vpn.hgnet.workers.dev/";//添加你要跳转的页面
+break;   
+}    
+testV+=1;   
+var pass1 =    
+prompt('密码错误','');   
+}   
+if (pass1!="password" & testV ==3)    
+history.go(-1);   
+return " ";   
+}    
+document.write(password());   
+</script>
+<!--屏蔽F12-->
+		<script>
+			document.oncontextmenu = function (event){
+			if(window.event){
+			event = window.event;
+			}try{
+			var the = event.srcElement;
+			if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+			return false;
+			}
+			return true;
+			}catch (e){
+			return false;
+			}
+			}
+		</script>
+		<script>
+			document.onkeydown = function(){
+
+		    if(window.event && window.event.keyCode == 123) {
+		        alert("Hi,欢迎来到欢哥网！");
+		        event.keyCode=0;
+		        event.returnValue=false;
+		    }
+		    if(window.event && window.event.keyCode == 13) {
+		        window.event.keyCode = 505;
+		    }
+		    if(window.event && window.event.keyCode == 8) {
+		        alert(str+"\n请使用Del键进行字符的删除操作！");
+		        window.event.returnValue=false;
+		    }
+			}
+		</script>
+</body>
+</html>
+
